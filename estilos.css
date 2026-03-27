@@ -254,3 +254,106 @@ body::before {
 .btn-primary * {
     color: #ffffff !important;
 }
+
+/* =========================
+   RESPONSIVE MOBILE & TABLET
+========================= */
+
+/* =====📱 MOBILE: hasta 768px ===== */
+@media (max-width: 768px) {
+
+    /* NAV */
+    .nav {
+        flex-direction: column;
+        padding: 15px 20px;
+        text-align: center;
+    }
+
+    .nav h2 {
+        margin-bottom: 10px;
+    }
+
+    .nav div {
+        margin-top: 5px;
+    }
+
+    .nav a {
+        display: inline-block;
+        margin: 6px;
+        font-size: 13px;
+    }
+
+    /* HERO */
+    .hero {
+        height: auto;
+        padding: 80px 20px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+        line-height: 1.3;
+    }
+
+    .hero p {
+        font-size: 14px;
+        letter-spacing: 2px;
+    }
+
+    /* BOTONES */
+    .btn-primary {
+        padding: 14px 24px;
+        font-size: 14px;
+    }
+
+    /* SECCIONES */
+    .section {
+        padding: 60px 20px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    /* GRID SERVICIOS → 1 columna */
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    /* TEXTO */
+    p {
+        font-size: 14px;
+    }
+
+    /* WHATSAPP */
+    .whatsapp-btn {
+        bottom: 15px;
+        right: 15px;
+        padding: 10px;
+    }
+
+    .whatsapp-btn img {
+        width: 24px;
+    }
+}
+
+/* =====📲 TABLET: 769px – 1024px ===== */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    /* HERO */
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    /* GRID SERVICIOS → 2 columnas */
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .section {
+        padding: 70px 30px;
+    }
+}
