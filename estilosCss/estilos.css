@@ -14,33 +14,69 @@
 /* header------------------------------------------------- */
 /* RESET */
 /* RESET */
+/* =========================
+   RESET
+========================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
-
+/* =========================
+   BASE
+========================= */
 body {
     font-family: 'Inter', sans-serif;
     background-color: #e6d6c2;
     color: #3a2e2a;
     line-height: 1.6;
+    position: relative;
 }
 
-/* TIPOGRAFÍA */
+/* FONDO FÉNIX SUAVE */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: url('../images/logo.png.jpeg') no-repeat center;
+    background-size: 600px;
+
+    opacity: 0.06;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* =========================
+   TIPOGRAFÍA
+========================= */
 h1, h2, h3 {
     font-family: 'Playfair Display', serif;
     font-weight: 400;
 }
 
-/* NAV */
+h2 {
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+/* =========================
+   NAV
+========================= */
 .nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
+
     background: rgba(230, 214, 194, 0.95);
     position: sticky;
     top: 0;
@@ -63,7 +99,9 @@ h1, h2, h3 {
     color: #c3502a;
 }
 
-/* BOTONES */
+/* =========================
+   BOTONES
+========================= */
 .btn, .btn-primary {
     padding: 10px 20px;
     border-radius: 30px;
@@ -73,11 +111,12 @@ h1, h2, h3 {
 
 .btn {
     border: 1px solid #c3502a;
+    color: #ffffff;
 }
 
 .btn-primary {
     background: #c3502a;
-    color: white;
+    color: #ffffff;
     display: inline-block;
     margin-top: 20px;
     transition: 0.3s;
@@ -87,7 +126,9 @@ h1, h2, h3 {
     background: #a84322;
 }
 
-/* HERO */
+/* =========================
+   HERO (ARREGLADO)
+========================= */
 .hero {
     height: 90vh;
     display: flex;
@@ -98,14 +139,8 @@ h1, h2, h3 {
     text-align: center;
     padding: 20px;
 
-    background: linear-gradient(
-        rgba(230, 214, 194, 0.8),
-        rgba(230, 214, 194, 0.95)
-    ),
-    url('tu-imagen.jpg'); /* opcional */
-
-    background-size: cover;
-    background-position: center;
+    /* 🔥 CLAVE: ahora transparente */
+    background: transparent;
 }
 
 .hero h1 {
@@ -119,7 +154,19 @@ h1, h2, h3 {
     color: #7a5c4f;
 }
 
-/* SECCIONES */
+.hero-sub {
+    margin-top: 10px;
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+.hero-btn {
+    margin-top: 30px;
+}
+
+/* =========================
+   SECCIONES
+========================= */
 .section {
     padding: 80px 20px;
     max-width: 1000px;
@@ -132,7 +179,9 @@ h1, h2, h3 {
     color: white;
 }
 
-/* GRID SERVICIOS */
+/* =========================
+   SERVICIOS
+========================= */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -156,17 +205,9 @@ h1, h2, h3 {
     backdrop-filter: blur(10px);
 }
 
-/* TEXTOS */
-h2 {
-    margin-bottom: 20px;
-    font-size: 32px;
-}
-
-p {
-    margin-bottom: 15px;
-}
-
-/* TESTIMONIOS */
+/* =========================
+   TESTIMONIOS
+========================= */
 blockquote {
     font-style: italic;
     margin: 20px auto;
@@ -174,13 +215,51 @@ blockquote {
     opacity: 0.8;
 }
 
-/* CONTACT */
+/* =========================
+   CONTACTO
+========================= */
+
 #contact a {
     color: #c3502a;
     text-decoration: none;
 }
 
-/* WHATSAPP FLOAT */
+#contact a.btn-primary {
+    color: #ffffff;
+}
+
+/* =========================
+   FORMULARIO
+========================= */
+.form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.form label {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.form input,
+.form select,
+.form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: 'Inter', sans-serif;
+}
+
+.form button {
+    margin-top: 20px;
+}
+
+/* =========================
+   WHATSAPP
+========================= */
 .whatsapp-btn {
     position: fixed;
     bottom: 20px;
@@ -195,7 +274,9 @@ blockquote {
     width: 30px;
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 footer {
     text-align: center;
     padding: 30px;
@@ -204,65 +285,11 @@ footer {
     color: #e6d6c2;
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-
-    .hero h1 {
-        font-size: 32px;
-    }
-
-    .nav {
-        flex-direction: column;
-    }
-
-    .nav div {
-        margin-top: 10px;
-    }
-}
-body {
-    font-family: 'Inter', sans-serif;
-    color: #3a2e2a;
-    line-height: 1.6;
-    position: relative;
-    background-color: #e6d6c2;
-}
-
-/* FONDO FÉNIX SUAVE */
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.04;
-
-    background: url('./logo.png.jpeg') no-repeat center;
-    background-size: 600px;
-
-    opacity: 0.06; /* 🔥 clave */
-    pointer-events: none;
-    z-index: -1;
-    
-}
-
-.btn-primary {
-    background: #c3502a !important;
-    color: #ffffff !important;
-}
-
-.btn-primary * {
-    color: #ffffff !important;
-}
-
 /* =========================
-   RESPONSIVE MOBILE & TABLET
+   RESPONSIVE
 ========================= */
-
-/* =====📱 MOBILE: hasta 768px ===== */
 @media (max-width: 768px) {
 
-    /* NAV */
     .nav {
         flex-direction: column;
         padding: 15px 20px;
@@ -273,17 +300,11 @@ body::before {
         margin-bottom: 10px;
     }
 
-    .nav div {
-        margin-top: 5px;
-    }
-
     .nav a {
-        display: inline-block;
         margin: 6px;
         font-size: 13px;
     }
 
-    /* HERO */
     .hero {
         height: auto;
         padding: 80px 20px;
@@ -291,7 +312,6 @@ body::before {
 
     .hero h1 {
         font-size: 28px;
-        line-height: 1.3;
     }
 
     .hero p {
@@ -299,61 +319,10 @@ body::before {
         letter-spacing: 2px;
     }
 
-    /* BOTONES */
-    .btn-primary {
-        padding: 14px 24px;
-        font-size: 14px;
-    }
-
-    /* SECCIONES */
-    .section {
-        padding: 60px 20px;
-    }
-
-    h2 {
-        font-size: 26px;
-    }
-
-    /* GRID SERVICIOS → 1 columna */
     .grid {
         grid-template-columns: 1fr;
     }
-
-    .card {
-        padding: 20px;
-    }
-
-    /* TEXTO */
-    p {
-        font-size: 14px;
-    }
-
-    /* WHATSAPP */
-    .whatsapp-btn {
-        bottom: 15px;
-        right: 15px;
-        padding: 10px;
-    }
-
-    .whatsapp-btn img {
-        width: 24px;
-    }
 }
-
-/* =====📲 TABLET: 769px – 1024px ===== */
-@media (min-width: 769px) and (max-width: 1024px) {
-
-    /* HERO */
-    .hero h1 {
-        font-size: 36px;
-    }
-
-    /* GRID SERVICIOS → 2 columnas */
-    .grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .section {
-        padding: 70px 30px;
-    }
+.btn.btn-primary {
+    color: #ffffff;
 }

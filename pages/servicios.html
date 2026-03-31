@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Session | Fénix</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../estilosCss/estilos.css">
+</head>
+
+<body>
+
+<nav class="nav">
+    <h2>FÉNIX</h2>
+    <div>
+        <a href="../index.html">Home</a>
+    </div>
+</nav>
+
+<section class="section">
+    <h2>Book your session</h2>
+
+    <form class="form">
+
+        <!-- NOMBRE -->
+        <label>Name</label>
+        <input type="text" name="name" required>
+
+        <!-- EMAIL -->
+        <label>Email</label>
+        <input type="email" name="email" required>
+
+        <!-- SERVICIO -->
+        <label>Select service</label>
+        <select name="service" required>
+            <option value="">Choose one</option>
+            <option>Massage Therapy</option>
+            <option>Reflexology</option>
+            <option>Reiki</option>
+            <option>Akashic Records</option>
+            <option>Systemic Coaching</option>
+            <option>Family Constellations</option>
+        </select>
+
+        <!-- FECHA -->
+        <label>Preferred date</label>
+        <input type="date" name="date" required>
+
+        <!-- MENSAJE -->
+        <label>Message (optional)</label>
+        <textarea name="message"></textarea>
+
+        <!-- BOTÓN -->
+        <button type="submit" class="btn-primary">Confirm booking</button>
+
+    </form>
+</section>
+
+</body>
+</html>
